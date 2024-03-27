@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="block1">Nhap so thu 1</string>
+    <string name="block2">Nhap so thu 2</string>
+    <string name="tinh">Tinh</string>
+</resources>
