@@ -1,6 +1,8 @@
 package com.example.myapplication.tuan2;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.myapplication.R;
 
 public class Tuan2LstViewActivity extends AppCompatActivity {
-
+    ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,5 +24,10 @@ public class Tuan2LstViewActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        lv = findViewById(R.id.lv);
+        String[] arr = new String[]{"Item1", "Item2","Item3", "Item4"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arr);
+        lv.setAdapter(adapter);
     }
 }
