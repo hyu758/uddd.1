@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,25 +15,31 @@
         android:theme="@style/Theme.AppCompat.Light"
         tools:targetApi="31">
         <activity
-            android:name=".tuan3.T3ListViewMainAc"
+            android:name=".tuan4.LstViewAcW4"
             android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".tuan2.Tuan2LstViewActivity"
+            android:name=".tuan4.MainActivity4"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".tuan3.T3ListViewMainAc"
+            android:exported="true"></activity>
+        <activity
+            android:name=".tuan2.Tuan2LstViewActivity"
+            android:exported="true" />
         <activity
             android:name=".tuan2.Tuan2MainAc2"
             android:exported="false" />
         <activity
             android:name=".tuan2.Tuan2MainAc1"
-            android:exported="true"></activity>
+            android:exported="false" />
         <activity
             android:name=".tuan1.Tuan1MainActivity"
             android:exported="true" />
