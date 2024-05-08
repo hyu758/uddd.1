@@ -11,7 +11,7 @@ class VolleyFn1 {
     fun getAllData(context: Context, textView: TextView){
         //Tao request
         val queue = Volley.newRequestQueue(context);
-        val url = "https://hungnttg.github.io/array_json_new.json";
+        val url = "http://localhost:8080/test/getData.php";
 
         //Goi request
         val request = JsonArrayRequest(url,{response->
@@ -19,7 +19,9 @@ class VolleyFn1 {
                 try {
                     val person = response.getJSONObject(i);
                     val id = person.getString("id");
-                    val name = person.getString("name");
+                    val first_name = person.getString("firstname");
+                    val last_name = person.getString("lastname");
+                    val name = first_name + last_name;
                     val email = person.getString("email");
                     strJson+="Id: $id\n";
                     strJson+="Name: $name\n";

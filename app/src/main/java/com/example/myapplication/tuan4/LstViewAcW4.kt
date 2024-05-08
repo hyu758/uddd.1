@@ -29,7 +29,7 @@ class LstViewAcW4 : AppCompatActivity() {
         }
         //khai bao
         val queue = Volley.newRequestQueue(context);
-        val url = "https://hungnttg.github.io/array_json_new.json";
+        val url = "https://api.npoint.io/4151aadde4535ebd2566";
         var lst = ArrayList<T4Person>()
         //Goi request
         val request = JsonArrayRequest(url,{response->
@@ -37,7 +37,9 @@ class LstViewAcW4 : AppCompatActivity() {
                 try {
                     val person = response.getJSONObject(i);
                     val id = person.getString("id");
-                    val name = person.getString("name");
+                    val first_name = person.getString("firstname");
+                    val last_name = person.getString("lastname");
+                    val name = first_name + last_name
                     val email = person.getString("email");
                     lst.add(T4Person(id, name, email));
                 }
