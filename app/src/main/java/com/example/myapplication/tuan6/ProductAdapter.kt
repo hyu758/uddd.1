@@ -1,6 +1,7 @@
 package com.example.myapplication.tuan6
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,7 +50,12 @@ class ProductAdapter(val ls : ArrayList<Product>, val context : Context): BaseAd
             vax.product_price!!.text = product.price.toString();
             vax.product_info!!.text = product.product_info;
         }
+        cvv?.setOnClickListener{
+            val intent = Intent(context, Tuan6DetailAct::class.java)
 
+            intent.putExtra("PRODUCT", product)
+            context.startActivity(intent)
+        }
         return cvv;
     }
 

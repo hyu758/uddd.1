@@ -53,7 +53,9 @@ class T6MainAc : AppCompatActivity() {
                 // Tạo adapter và gán vào ListView tại đây sau khi lấy được dữ liệu
                 adt = ProductAdapter(lst, this)
                 val lv6 = findViewById<ListView>(R.id.t6listview)
+                adt.notifyDataSetChanged()
                 lv6.adapter = adt
+
             },
             { error ->
                 Log.e("Error", "Error occured: $error")

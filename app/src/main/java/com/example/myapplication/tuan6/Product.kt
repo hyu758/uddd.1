@@ -1,6 +1,8 @@
 package com.example.myapplication.tuan6
 
-class Product {
+import java.io.Serializable
+
+class Product : Serializable {
     var styleid : String ? = null;
     var brand : String ? = null;
     var price : Int ? = null;
